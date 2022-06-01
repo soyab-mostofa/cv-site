@@ -49,7 +49,7 @@ const Item = ({ feature }) => {
         <span className="mb-2 text-6xl">
           <feature.icon />
         </span>
-        <h4>{feature.text}</h4>
+        <h4 className="text-sm sm:text-base">{feature.text}</h4>
       </div>
     </Parallax>
   );

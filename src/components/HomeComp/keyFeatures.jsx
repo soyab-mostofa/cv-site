@@ -42,7 +42,7 @@ const Feature = ({ feature, key }) => {
 const KeyFeatures = () => {
   return (
     <Background>
-      <Container>
+      <Container className="py-10">
         <Parallax>
           <Title>Key Features</Title>
         </Parallax>

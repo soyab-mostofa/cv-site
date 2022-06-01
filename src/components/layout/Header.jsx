@@ -3,7 +3,7 @@ import React from 'react';
 import tw from 'tailwind-styled-components';
 import { Squeeze as Hamburger } from 'hamburger-react';
 
-const NavContainer = tw.div`bg-neutral-900 py-4`;
+const NavContainer = tw.div`bg-neutral-900/70 py-4  fixed w-full backdrop-blur-md z-50`;
 const NavContainerInner = tw.div`container mx-auto px-4 flex items-center justify-between`;
 const NavLinkContainer = tw.ul`hidden md:flex items-center space-x-4`;
 const LinkItem = tw.li`text-neutral-50 capitalize cursor-pointer hover:text-neutral-500 transition-all tracking-wide`;

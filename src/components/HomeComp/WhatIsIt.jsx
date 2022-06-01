@@ -1,12 +1,13 @@
 import Parallax from 'components/layout/Parallax';
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import tw from 'tailwind-styled-components';
 import matterPort from '../../assets/matterport.png';
 const Container = tw.h1`container max-w-6xl px-4 mx-auto py-20 justify-center `;
 const Title = tw.h1`text-3xl font-semibold uppercase tracking-widest mb-4`;
-const P = tw.p` md:text-lg mb-2`;
+const P = tw.p` text-sm md:text-lg mb-2`;
 const Background = tw.div`bg-neutral-100 py-12`;
-const ImageContainer = tw.div`relative mx-auto mt-8 max-w-md pb-64 flex-1`;
+const ImageContainer = tw.div`relative mx-auto mt-8 max-w-md  flex-1`;
 const Button = tw.button`text-neutral-50 px-6 py-3 tracking-wide transition-all hover:text-neutral-900 hover:bg-neutral-300 uppercase bg-black`;
 const Image = tw.img`absolute top-0 flex-1 left-0 h-full w-full object-cover`;
 
@@ -31,7 +32,7 @@ const WhatIsIt = () => {
               </P>
             </div>
             <ImageContainer>
-              <Image src={matterPort} alt="" srcset="" />
+              <LazyLoadImage src={matterPort} effect="blur" />
             </ImageContainer>
           </div>
         </Parallax>
