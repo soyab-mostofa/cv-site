@@ -26,8 +26,8 @@ const Header = () => {
         <H1>CD</H1>
 
         <NavLinkContainer>
-          {navData.map((item) => (
-            <NavLink item={item} />
+          {navData.map((item, i) => (
+            <NavLink item={item} key={i} />
           ))}
           <Button>Contact us</Button>
         </NavLinkContainer>

@@ -44,14 +44,14 @@ const features = [
 
 const Item = ({ feature }) => {
   return (
-    <Parallax>
-      <div className="flex flex-col max-w-sm mx-auto">
-        <span className="mb-2 text-6xl">
+    <>
+      <div className="flex flex-col max-w-sm mx-auto mb-3 text-center">
+        <span className="mx-auto mb-2 text-6xl">
           <feature.icon />
         </span>
-        <h4 className="text-sm sm:text-base">{feature.text}</h4>
+        <h4 className="mt-3 text-sm sm:text-base">{feature.text}</h4>
       </div>
-    </Parallax>
+    </>
   );
 };
 
@@ -61,12 +61,12 @@ const AdditionalFeatures = () => {
       <Container>
         <Parallax>
           <Title>Additional Features</Title>
+          <div className="grid gap-4 mt-20 md:grid-cols-2">
+            {features.map((feature, i) => (
+              <Item key={i} feature={feature} />
+            ))}
+          </div>
         </Parallax>
-        <div className="grid gap-4 mt-20 md:grid-cols-2">
-          {features.map((feature, i) => (
-            <Item key={i} feature={feature} />
-          ))}
-        </div>
       </Container>
     </Background>
   );

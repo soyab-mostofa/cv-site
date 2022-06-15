@@ -11,7 +11,7 @@ import feature3 from '../../assets/images/feature3.png';
 import feature4 from '../../assets/images/feature4.png';
 import feature5 from '../../assets/images/feature5.png';
 
-const H4 = tw.h4`mt-4 text-base sm:text-xl font-semibold md:w-60`;
+const H4 = tw.h4`mt-4 md:mt-0 text-base sm:text-xl font-semibold md:w-60`;
 const ImageContainer = tw.div`grid gap-8 sm:grid-cols-2`;
 
 const features = [
@@ -25,11 +25,10 @@ const features = [
   },
 ];
 
-const Feature = ({ feature, key }) => {
-  console.log(feature);
+const Feature = ({ feature }) => {
   return (
     <Parallax>
-      <div className="gap-4 md:flex md:justify-center" key={key}>
+      <div className="gap-4 md:flex md:justify-center">
         <div className="w-full sm:w-52">
           <LazyLoadImage src={feature.image} effect="blur" alt={feature.text} />
         </div>
