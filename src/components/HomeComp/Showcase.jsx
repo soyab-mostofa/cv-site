@@ -12,9 +12,9 @@ const ShowcaseItem = ({ item: { title, modelLink } }) => {
       <iframe
         className="absolute top-0 left-0 w-full h-full"
         src={modelLink}
-        frameborder="0"
+        frameBorder="0"
         title={title}
-        allowfullscreen
+        allowFullScreen
         allow="xr-spatial-tracking"
       ></iframe>
     </div>
@@ -23,7 +23,6 @@ const ShowcaseItem = ({ item: { title, modelLink } }) => {
 
 const Showcase = () => {
   const models = useStore((state) => state.models);
-  console.log(models);
 
   return (
     <Background>
@@ -31,7 +30,8 @@ const Showcase = () => {
         <Parallax>
           <Title>Showcase</Title>
           <div className="mt-4">
-            {models && models.map((item) => <ShowcaseItem item={item} />)}
+            {models &&
+              models.map((item, i) => <ShowcaseItem key={i} item={item} />)}
           </div>
         </Parallax>
       </Container>

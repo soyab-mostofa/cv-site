@@ -1,11 +1,29 @@
+import Drawer from 'components/layout/Drawer';
+import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
 import HomePages from 'components/pages/HomePages';
+import NotFoundPage from 'components/pages/NotFoundPage';
+import { useState } from 'react';
+import { Route } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
+  const [showNav, setShowNav] = useState(false);
+
   return (
     <>
-      <Header />
-      <HomePages />
+      <BrowserRouter>
+        <Header showNav={showNav} setShowNav={setShowNav} />
+        {showNav && <Drawer />}
+        <main className="h-full">
+          <Routes>
+            <Route path="/" element={<HomePages />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

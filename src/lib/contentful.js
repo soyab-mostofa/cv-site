@@ -4,7 +4,6 @@ const space = process.env.REACT_APP_SPACE_ID;
 const accessToken = process.env.REACT_APP_TOKEN;
 
 export const main = async () => {
-  console.log(accessToken);
   const endpoint = `https://graphql.contentful.com/content/v1/spaces/${space}`;
 
   const graphQLClient = new GraphQLClient(endpoint, {

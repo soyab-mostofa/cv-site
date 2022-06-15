@@ -1,6 +1,22 @@
 export const navData = [
-  { name: 'services', link: '/services' },
-  { name: 'portfolio', link: '/portfolio' },
-  { name: 'blog', link: '/blog' },
-  { name: 'about', link: '/about' },
+  {
+    name: 'Services',
+    url: '/services',
+  },
+  {
+    name: 'About',
+    url: '/about',
+  },
+  {
+    name: 'Contact',
+    url: '/contact',
+  },
+  {
+    name: 'Portfolio',
+    url: '/portfolio',
+  },
+  {
+    name: 'Blog',
+    url: '/blog',
+  },
 ];

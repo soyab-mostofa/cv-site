@@ -1,10 +1,11 @@
 import React from 'react';
+import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 import tw from 'tailwind-styled-components';
 import Parallax from 'components/layout/Parallax';
 const Container = tw(
   motion.div
-)`container px-4 mx-auto md:py-72 py-40  max-w-6xl h-screen`;
+)`container px-4 overflow-hidden mx-auto md:py-72 py-40  max-w-6xl h-screen relative`;
 const Heading = tw(motion.h1)`text-4xl md:text-6xl font-semibold`;
 const Sub = tw.p`text-xl md:text-2xl font-semibold my-4`;
 const P = tw(motion.p)`md:text-lg text-sm mb-4 `;
@@ -35,17 +36,24 @@ const Hero = () => {
           animate="animate"
         >
           <Parallax>
-            <Heading>3D VIRTUAL TOURS</Heading>
-            <Sub>HIGH-FIDELITY INTERACTIVE INTERIOR WALK-THROUGHS</Sub>
-            <P>
-              Auleek’s 3D interactive virtual solution is the ideal way for you
-              to showcase your space. Whether for marketing of your spaces,
-              showcasing your interior design, conservation of design heritage,
-              or anything else, our technology offers the best visual quality,
-              smoothest navigation and most extensive feature set.
-            </P>
-            <Button>get a quote</Button>
+            <div className="relative z-20">
+              <Heading>3D VIRTUAL TOURS</Heading>
+              <Sub>HIGH-FIDELITY INTERACTIVE INTERIOR WALK-THROUGHS</Sub>
+              <P>
+                Auleek’s 3D interactive virtual solution is the ideal way for
+                you to showcase your space. Whether for marketing of your
+                spaces, showcasing your interior design, conservation of design
+                heritage, or anything else, our technology offers the best
+                visual quality, smoothest navigation and most extensive feature
+                set.
+              </P>
+              <Button>get a quote</Button>
+            </div>
           </Parallax>
+          <div className="absolute bottom-0 right-0">
+            <Spline scene="https://prod.spline.design/kNCj3cBhjiCk3nNY/scene.splinecode" />
+            <div className="absolute top-0 w-full h-full bg-transparent" />
+          </div>
         </Container>
       </Background>
     </>
