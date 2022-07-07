@@ -3,7 +3,7 @@ import { FaFacebook, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { Container, Background } from './styles';
 const Footer = () => {
   return (
-    <Background>
+    <Background className="py-2 ">
       <Container className="justify-between md:flex">
         <div className="mb-4 text-center md:text-left">
           <p className="">Privacy Policy</p>

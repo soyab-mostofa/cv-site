@@ -1,8 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@splinetool/react-spline': ^2.2.1
-  '@splinetool/runtime': ^0.9.69
   '@testing-library/jest-dom': ^5.16.4
   '@testing-library/react': ^13.3.0
   '@testing-library/user-event': ^13.5.0
@@ -11,6 +9,7 @@ specifiers:
   graphql: ^16.5.0
   graphql-request: ^4.3.0
   hamburger-react: ^2.5.0
+  lottie-react: ^2.3.1
   postcss: ^8.4.14
   react: ^18.1.0
   react-dom: ^18.1.0
@@ -25,8 +24,6 @@ specifiers:
   zustand: 4.0.0-rc.1
 
 dependencies:
-  '@splinetool/react-spline': 2.2.1_og4cytqfexoby2e3hbqsmhf77y
-  '@splinetool/runtime': 0.9.69
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_ef5jwxihqo6n7gxfmzogljlgcm
   '@testing-library/user-event': 13.5.0
@@ -34,6 +31,7 @@ dependencies:
   graphql: 16.5.0
   graphql-request: 4.3.0_graphql@16.5.0
   hamburger-react: 2.5.0_react@18.1.0
+  lottie-react: 2.3.1_ef5jwxihqo6n7gxfmzogljlgcm
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-icons: 4.4.0_react@18.1.0
@@ -2023,25 +2021,6 @@ packages:
     resolution: {integrity: sha512-OAPJUAtgeINhh/TAlUID4QTs53Njm7xzddaVlEs/SXwgtiD1tW22zAB/W1wdqfrpmikgaWQ9Fw6Ws+hsiRm5Vg==}
     dependencies:
       '@sinonjs/commons': 1.8.3
-    dev: false
-
-  /@splinetool/react-spline/2.2.1_og4cytqfexoby2e3hbqsmhf77y:
-    resolution: {integrity: sha512-GDVYDEhYn9AjUbOWMpg2qIAtH3yYuw0itiG/lcNv5H1WZ5R3E3TjcNvyVou2td/16DW9m03N5cI/WVKGgsSFxg==}
-    peerDependencies:
-      '@splinetool/runtime': '*'
-      react: '>=17.0.0'
-      react-dom: '>=17.0.0'
-    dependencies:
-      '@splinetool/runtime': 0.9.69
-      react: 18.1.0
-      react-dom: 18.1.0_react@18.1.0
-      react-merge-refs: 1.1.0
-    dev: false
-
-  /@splinetool/runtime/0.9.69:
-    resolution: {integrity: sha512-TzIjn9G7iKtpxUl/iRYihR66V+p7CD51Pxf7bOeramYKvf4f2ZBvt8VJ/XKI96ds5xUCTBg5d2Ai1ewrFANOCA==}
-    dependencies:
-      on-change: 4.0.1
     dev: false
 
   /@surma/rollup-plugin-off-main-thread/2.2.3:
@@ -6560,6 +6539,21 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
+  /lottie-react/2.3.1_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-8cxd6XZZtECT6LoAhCftRdYrEpHxiouvB5EPiYA+TtCG5LHNYAdMS9IVIHcxKtWnpo7x16QfCLj1XLXZpaN81A==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      lottie-web: 5.9.6
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
+
+  /lottie-web/5.9.6:
+    resolution: {integrity: sha512-JFs7KsHwflugH5qIXBpB4905yC1Sub2MZWtl/elvO/QC6qj1ApqbUZJyjzJseJUtVpgiDaXQLjBlIJGS7UUUXA==}
+    dev: false
+
   /lower-case/2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
@@ -6895,11 +6889,6 @@ packages:
 
   /obuf/1.1.2:
     resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
-    dev: false
-
-  /on-change/4.0.1:
-    resolution: {integrity: sha512-Gxmr/8NsLTigoUUEPvnAIUGl7uxwfC3Mm1G+qTmODEZcT4ZGfeaFyQgfGCdbKVS2pICIFYB82RH6MUHToPcS4Q==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
   /on-finished/2.4.1:
@@ -8116,10 +8105,6 @@ packages:
       lodash.throttle: 4.1.1
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
-    dev: false
-
-  /react-merge-refs/1.1.0:
-    resolution: {integrity: sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==}
     dev: false
 
   /react-player/2.10.1_react@18.1.0:

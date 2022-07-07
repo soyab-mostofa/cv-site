@@ -1,58 +1,42 @@
 import React from 'react';
-import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 import tw from 'tailwind-styled-components';
 import Parallax from 'components/layout/Parallax';
-const Container = tw(
-  motion.div
-)`container px-4 overflow-hidden mx-auto md:py-72 py-40  max-w-6xl h-[700px] relative z-20 h-[800px]`;
-const Heading = tw(motion.h1)`text-4xl md:text-6xl font-semibold`;
-const Sub = tw.p`text-xl md:text-2xl font-semibold my-4`;
-const P = tw(motion.p)`md:text-lg text-sm mb-4 `;
-const Background = tw.div`bg-gradient-to-tr from-neutral-900 to-amber-900 text-neutral-50 relative `;
-const Button = tw.button`text-neutral-50 px-6 py-3 tracking-wide transition-all hover:text-neutral-900 hover:bg-neutral-300 uppercase bg-black`;
-
-const containerVariants = {
-  initial: {
-    y: 500,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-    },
-  },
-};
-
+import Lottie from 'lottie-react';
+import animationData from 'assets/dots-background.json';
+import ReactPlayer from 'react-player';
+const Button = tw.button`text-neutral-50 px-4 py-2 bg-neutral-900 text-md tracking-wide transition-all hover:text-neutral-900 hover:bg-neutral-300 uppercase mt-3`;
 const Hero = () => {
   return (
-    <>
-      <Background>
-        <Container
-          variants={containerVariants}
-          initial="initial"
-          animate="animate"
-        >
+    <div className="w-full bg-gradient-to-br from-neutral-50 to-neutral-100">
+      <div className=" h-[700px] relative container mx-auto max-w-6xl">
+        <Lottie
+          animationData={animationData}
+          className="absolute p-12 bottom-4 right-16 h-1/2"
+        />
+        <div className="relative z-10 mx-4 pt-36">
           <Parallax>
-            <Heading>3D VIRTUAL TOURS</Heading>
-            <Sub>HIGH-FIDELITY INTERACTIVE INTERIOR WALK-THROUGHS</Sub>
-            <P>
-              Auleek’s 3D interactive virtual solution is the ideal way for you
-              to showcase your space. Whether for marketing of your spaces,
-              showcasing your interior design, conservation of design heritage,
-              or anything else, our technology offers the best visual quality,
-              smoothest navigation and most extensive feature set.
-            </P>
-            <Button>get a quote</Button>
+            <div className="max-w-md md:max-w-xl">
+              <h1 className="mb-3 text-3xl font-semibold tracking-wider text-neutral-900">
+                3D VIRTUAL TOURS
+              </h1>
+              <p className="mb-3 font-semibold text-md text-neutral-900">
+                HIGH-FIDELITY INTERACTIVE INTERIOR WALK-THROUGHS
+              </p>
+              <p className="text-md text-neutral-900">
+                Clyde Visual's 3D interactive virtual solution is the ideal way
+                for you to showcase your space. Whether for marketing of your
+                spaces, showcasing your interior design, conservation of design
+                heritage, or anything else, our technology offers the best
+                visual quality, smoothest navigation and most extensive feature
+                set.
+              </p>
+              <Button>get a quote</Button>
+            </div>
           </Parallax>
-        </Container>
-        <div className="absolute bottom-0 right-0 z-0 w-full h-full">
-          <Spline scene="https://prod.spline.design/sFKlXcOdIglFLs3d/scene.splinecode" />
         </div>
-      </Background>
-    </>
+      </div>
+    </div>
   );
 };
 
