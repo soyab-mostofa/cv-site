@@ -2,39 +2,63 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import tw from 'tailwind-styled-components';
 import Parallax from 'components/layout/Parallax';
-import Lottie from 'lottie-react';
-import animationData from 'assets/dots-background.json';
-import ReactPlayer from 'react-player';
+import heroBg from 'assets/images/hero-bg.png';
+import logo from 'assets/images/cv-logo.png';
 const Button = tw.button`text-neutral-50 px-4 py-2 bg-neutral-900 text-md tracking-wide transition-all hover:text-neutral-900 hover:bg-neutral-300 uppercase mt-3`;
+
+const containerVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.3,
+      duration: 0.3,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
 const Hero = () => {
   return (
-    <div className="w-full bg-gradient-to-br from-neutral-50 to-neutral-100">
-      <div className=" h-[700px] relative container mx-auto max-w-6xl">
-        <Lottie
-          animationData={animationData}
-          className="absolute p-12 bottom-4 right-16 h-1/2"
-        />
-        <div className="relative z-10 mx-4 pt-36">
+    <div className="relative w-full bg-gradient-to-br from-neutral-50 to-neutral-100">
+      <div className="absolute top-0 left-0 block w-full h-full overflow-hidden ">
+        <img className="absolute w-full h-full" src={heroBg} alt="hero-bg" />
+      </div>
+      <div className="min-h-[93vh] relative ">
+        <motion.div
+          variants={containerVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className="z-10 block pt-36"
+        >
           <Parallax>
-            <div className="max-w-md md:max-w-xl">
+            <div className="max-w-md mx-auto text-center md:max-w-xl">
+              <div className="relative h-40 mx-auto w-36">
+                <img
+                  className="absolute object-cover w-full h-full"
+                  src={logo}
+                  alt="main-logo"
+                />
+              </div>
               <h1 className="mb-3 text-3xl font-semibold tracking-wider text-neutral-900">
-                3D VIRTUAL TOURS
+                Clyde Visuals
               </h1>
               <p className="mb-3 font-semibold text-md text-neutral-900">
-                HIGH-FIDELITY INTERACTIVE INTERIOR WALK-THROUGHS
+                3D VIRTUAL TOURS
               </p>
               <p className="text-md text-neutral-900">
-                Clyde Visual's 3D interactive virtual solution is the ideal way
-                for you to showcase your space. Whether for marketing of your
-                spaces, showcasing your interior design, conservation of design
-                heritage, or anything else, our technology offers the best
-                visual quality, smoothest navigation and most extensive feature
-                set.
+                Attention Grabbing, High Quality, Feature Rich 3D Virtual Tours
               </p>
               <Button>get a quote</Button>
             </div>
           </Parallax>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

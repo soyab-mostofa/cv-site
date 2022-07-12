@@ -3,6 +3,7 @@ import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
 import HomePages from 'components/pages/HomePages';
 import NotFoundPage from 'components/pages/NotFoundPage';
+import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
@@ -15,7 +16,9 @@ function App() {
     <>
       <BrowserRouter>
         <Header showNav={showNav} setShowNav={setShowNav} />
-        {showNav && <Drawer />}
+        <AnimatePresence>
+          {showNav && <Drawer setShowNav={setShowNav} />}
+        </AnimatePresence>
         <main className="h-full">
           <Routes>
             <Route path="/" element={<HomePages />} />

@@ -19,7 +19,7 @@ const Parallax = ({ children, offset = 50 }) => {
 
   const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
 
-  const y = useSpring(yRange, { stiffness: 400, damping: 90 });
+  const y = useSpring(yRange, { stiffness: 800, damping: 150 });
   useLayoutEffect(() => {
     const element = ref.current;
 
