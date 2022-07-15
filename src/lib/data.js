@@ -7,10 +7,7 @@ export const navData = [
     name: 'About',
     url: '/about',
   },
-  {
-    name: 'Contact',
-    url: '/contact',
-  },
+
   {
     name: 'Portfolio',
     url: '/portfolio',
