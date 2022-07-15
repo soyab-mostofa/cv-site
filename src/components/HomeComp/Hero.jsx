@@ -33,6 +33,9 @@ const Hero = () => {
     <div className="relative w-full overflow-hidden bg-neutral-900">
       <div className="absolute overflow-x-hidden  h-[800px]">
         <video
+          autoPlay
+          muted
+          loop
           style={{
             top: '100px',
             height: '100%',

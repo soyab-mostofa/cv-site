@@ -1,10 +1,10 @@
 import Parallax from 'components/layout/Parallax';
+import { Title } from 'components/layout/styles';
 import { useStore } from 'feature/store';
 import React from 'react';
 import tw from 'tailwind-styled-components';
 const Container = tw.div`container px-4 max-w-6xl mx-auto`;
 const Background = tw.div`bg-neutral-900 text-neutral-50 py-20`;
-const Title = tw.h1`text-3xl font-semibold uppercase tracking-widest`;
 
 const ShowcaseItem = ({ item: { title, modelLink } }) => {
   return (

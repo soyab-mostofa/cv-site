@@ -5,6 +5,7 @@ specifiers:
   '@testing-library/react': ^13.3.0
   '@testing-library/user-event': ^13.5.0
   autoprefixer: ^10.4.7
+  embla-carousel-react: 7.0.0-rc04
   framer-motion: ^6.3.5
   graphql: ^16.5.0
   graphql-request: ^4.3.0
@@ -27,6 +28,7 @@ dependencies:
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_ef5jwxihqo6n7gxfmzogljlgcm
   '@testing-library/user-event': 13.5.0
+  embla-carousel-react: 7.0.0-rc04_react@18.1.0
   framer-motion: 6.3.5_ef5jwxihqo6n7gxfmzogljlgcm
   graphql: 16.5.0
   graphql-request: 4.3.0_graphql@16.5.0
@@ -4184,6 +4186,19 @@ packages:
 
   /electron-to-chromium/1.4.141:
     resolution: {integrity: sha512-mfBcbqc0qc6RlxrsIgLG2wCqkiPAjEezHxGTu7p3dHHFOurH4EjS9rFZndX5axC8264rI1Pcbw8uQP39oZckeA==}
+
+  /embla-carousel-react/7.0.0-rc04_react@18.1.0:
+    resolution: {integrity: sha512-5Ndn+EeLX9DPZnR1wXH5+y9gnrh+ML5HO0+20l6rcnuhVqpJRMv2E3ZWnAw4jw7HmHAl+5eDKZaA6CGxgWiUdQ==}
+    peerDependencies:
+      react: ^18.1.0
+    dependencies:
+      embla-carousel: 7.0.0-rc04
+      react: 18.1.0
+    dev: false
+
+  /embla-carousel/7.0.0-rc04:
+    resolution: {integrity: sha512-vhzwCEdEqwS5c6jlfPHy/X1uUkwf9AvMma8KWNbmTgB3NUNN9hoqiyTdrpraMtPU5MzlxpZipln74ZwDK4v63g==}
+    dev: false
 
   /emittery/0.10.2:
     resolution: {integrity: sha512-aITqOwnLanpHLNXZJENbOgjUBeHocD+xsSJmNrjovKBW5HbSpW3d1pEls7GFQPUWXiwG9+0P4GtHfEqC/4M0Iw==}
