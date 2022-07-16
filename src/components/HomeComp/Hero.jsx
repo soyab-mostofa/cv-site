@@ -29,7 +29,6 @@ const containerVariants = {
 const Hero = () => {
   const dimensions = useWindowDimensions();
 
-  console.log(dimensions);
   return (
     <div className="relative w-full overflow-hidden bg-neutral-900">
       <div className="absolute h-full overflow-x-hidden after:bg-black/50 after:w-full after:h-full after:absolute after:top-0 after:left-0">
@@ -55,7 +54,7 @@ const Hero = () => {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="z-10 block pt-64"
+          className="z-10 block py-24"
         >
           <Parallax>
             {/* <div className="md:flex md:justify-center md:items-center md:-translate-x-12">
@@ -83,13 +82,13 @@ const Hero = () => {
               className="relative"
               style={{
                 marginInline: 'auto',
-                width: dimensions.width - 200,
+                width: dimensions.width,
                 height: dimensions.width / 2,
               }}
             >
               <img
                 src={hero}
-                className="absolute object-cover w-full h-full"
+                className="absolute object-contain w-full h-full"
                 alt="hero"
               />
             </div>

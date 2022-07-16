@@ -1,6 +1,7 @@
 import Drawer from 'components/layout/Drawer';
 import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
+import GalleryPage from 'components/pages/GalleryPage';
 import HomePages from 'components/pages/HomePages';
 import NotFoundPage from 'components/pages/NotFoundPage';
 import { AnimatePresence } from 'framer-motion';
@@ -22,6 +23,7 @@ function App() {
         <main className="h-full">
           <Routes>
             <Route path="/" element={<HomePages />} />
+            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>

@@ -1,7 +1,7 @@
 export const navData = [
   {
-    name: 'Services',
-    url: '/services',
+    name: 'Gallery',
+    url: '/gallery',
   },
   {
     name: 'About',

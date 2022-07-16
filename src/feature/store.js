@@ -1,9 +1,10 @@
-import { main } from 'lib/contentful';
+import { getProjects } from 'lib/graphql';
 import create from 'zustand';
 
 const fetchModels = async (set) => {
-  const models = await main();
-  set({ models: models.modelCollection.items });
+  const models = await getProjects();
+
+  set({ models });
 };
 
 export const useStore = create((set) => ({

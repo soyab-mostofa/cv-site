@@ -55,7 +55,6 @@ const cardData = [
   },
 ];
 const Card = ({ data }) => {
-  console.log(data);
   return (
     <div className="flex-grow-0 mr-4 bg-black shadow-lg text-neutral-900 basis-full shrink-0 sm:basis-1/2 md:basis-1/3 xl:basis-1/4">
       <div className="relative h-52">
