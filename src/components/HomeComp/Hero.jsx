@@ -32,7 +32,7 @@ const Hero = () => {
   console.log(dimensions);
   return (
     <div className="relative w-full overflow-hidden bg-neutral-900">
-      <div className="absolute overflow-x-hidden  h-[800px] after:bg-black/50 after:w-full after:h-full after:absolute  after:top-0 after:left-0">
+      <div className="absolute h-full overflow-x-hidden after:bg-black/50 after:w-full after:h-full after:absolute after:top-0 after:left-0">
         <video
           autoPlay
           muted
@@ -49,7 +49,7 @@ const Hero = () => {
         </video>
       </div>
 
-      <div className="relative h-[800px] ">
+      <div className="relative ">
         <motion.div
           variants={containerVariants}
           initial="initial"
@@ -82,7 +82,8 @@ const Hero = () => {
             <div
               className="relative"
               style={{
-                width: dimensions.width,
+                marginInline: 'auto',
+                width: dimensions.width - 200,
                 height: dimensions.width / 2,
               }}
             >
