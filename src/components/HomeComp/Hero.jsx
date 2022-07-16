@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import tw from 'tailwind-styled-components';
 import Parallax from 'components/layout/Parallax';
-import heroVideo from 'assets/hero-video.mp4';
-import logo from 'assets/images/cv-logo.png';
+import bannerInfo from 'assets/images/banner-info.png';
+import logo from 'assets/logo.png';
+import hero from 'assets/hero-image.png';
 import bgVideo from 'assets/background-video.mp4';
 import useWindowDimensions from 'lib/useWindowDimensions';
 const Button = tw.button`text-neutral-900 px-4 py-2 bg-neutral-100 text-md tracking-wide text-center transition-all hover:text-neutral-900 mx-auto hover:bg-neutral-300 uppercase mt-3`;
@@ -31,7 +32,7 @@ const Hero = () => {
   console.log(dimensions);
   return (
     <div className="relative w-full overflow-hidden bg-neutral-900">
-      <div className="absolute overflow-x-hidden  h-[800px]">
+      <div className="absolute overflow-x-hidden  h-[800px] after:bg-black/50 after:w-full after:h-full after:absolute  after:top-0 after:left-0">
         <video
           autoPlay
           muted
@@ -48,46 +49,48 @@ const Hero = () => {
         </video>
       </div>
 
-      <div className="relative  h-[800px] ">
+      <div className="relative h-[800px] ">
         <motion.div
           variants={containerVariants}
           initial="initial"
           animate="animate"
           exit="exit"
-          className="z-10 block pt-36"
+          className="z-10 block pt-64"
         >
           <Parallax>
-            <div className="container flex flex-col items-center justify-around mx-auto md:justify-center md:flex-row-reverse">
-              <div className="flex flex-col pb-20 space-y-4 basis-full">
-                <div className="relative h-40 mx-auto w-36">
-                  <img
-                    className="absolute object-cover w-full h-full invert"
-                    src={logo}
-                    alt="main-logo"
-                  />
-                </div>
-                <h1 className="mb-3 text-3xl font-semibold tracking-wider text-center text text-neutral-50 ">
-                  Clyde Visuals
-                </h1>
-                <p className="mb-3 font-semibold text-center text text-md text-neutral-50">
-                  3D VIRTUAL TOURS
-                </p>
-                <p className="text-center text-md text text-neutral-50">
+            {/* <div className="md:flex md:justify-center md:items-center md:-translate-x-12">
+              <div className="mr-8 text-neutral-50 md:text-right md:max-w-xs">
+                <h3 className="text-4xl uppercase">3d virtual tours</h3>
+                <p>
                   Attention Grabbing, High Quality, Feature Rich 3D Virtual
                   Tours
                 </p>
-                <Button>get a quote</Button>
               </div>
-              {/* <div className="relative w-full h-[600px]">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  src={heroVideo}
-                  alt="hero-bg"
-                  className="absolute w-full h-full"
-                />
-              </div> */}
+              <div className="flex flex-col justify-center border-l-2 md:items-start border-l-neutral-50">
+                <div className="relative w-40 h-40">
+                  <img
+                    className="absolute object-cover w-full h-full "
+                    src={logo}
+                    alt="logo"
+                  />
+                </div>
+                <p className="w-full text-center uppercase text-neutral-50 ">
+                  clyde visuals
+                </p>
+              </div>
+            </div> */}
+            <div
+              className="relative"
+              style={{
+                width: dimensions.width,
+                height: dimensions.width / 2,
+              }}
+            >
+              <img
+                src={hero}
+                className="absolute object-cover w-full h-full"
+                alt="hero"
+              />
             </div>
           </Parallax>
         </motion.div>
