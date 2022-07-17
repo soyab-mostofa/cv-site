@@ -57,33 +57,13 @@ const Hero = () => {
           className="z-10 block py-24"
         >
           <Parallax>
-            {/* <div className="md:flex md:justify-center md:items-center md:-translate-x-12">
-              <div className="mr-8 text-neutral-50 md:text-right md:max-w-xs">
-                <h3 className="text-4xl uppercase">3d virtual tours</h3>
-                <p>
-                  Attention Grabbing, High Quality, Feature Rich 3D Virtual
-                  Tours
-                </p>
-              </div>
-              <div className="flex flex-col justify-center border-l-2 md:items-start border-l-neutral-50">
-                <div className="relative w-40 h-40">
-                  <img
-                    className="absolute object-cover w-full h-full "
-                    src={logo}
-                    alt="logo"
-                  />
-                </div>
-                <p className="w-full text-center uppercase text-neutral-50 ">
-                  clyde visuals
-                </p>
-              </div>
-            </div> */}
             <div
               className="relative"
               style={{
                 marginInline: 'auto',
-                width: dimensions.width / 2,
+                width: dimensions.width,
                 height: dimensions.width / 2,
+                maxWidth: '600px',
               }}
             >
               <img
