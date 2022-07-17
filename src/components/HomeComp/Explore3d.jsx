@@ -2,9 +2,9 @@ import React from 'react';
 
 const Explore3d = () => {
   return (
-    <div className="container px-4 py-8 mx-auto lg:flex md:justify-between md:gap-4">
-      <div className="px-2 space-y-8 lg:max-w-xs">
-        <h4 className="relative left-0 text-4xl after:bg-amber-400 after:h-0.5 after:absolute after:w-3/5 after:-bottom-1 after:left-0 tracking-wider max-w-xs">
+    <div className="container max-w-6xl px-2 pt-12 pb-4 mx-auto md:flex md:justify-between md:gap-4">
+      <div className="space-y-8 md:w-1/2">
+        <h4 className="relative left-0 text-4xl after:bg-amber-400 after:h-0.5 after:absolute after:w-3/5 after:-bottom-1 after:left-0 tracking-wider ">
           EXPLORE A 3D TOUR FOR YOURSELF
         </h4>
         <p className="pb-4 ">
@@ -15,7 +15,7 @@ const Explore3d = () => {
           immersive VR situation.
         </p>
       </div>
-      <div className="relative w-full aspect-video">
+      <div className="relative w-full md:w-1/2 aspect-video">
         <iframe
           className="absolute top-0 left-0 w-full min-w-[300px] h-full"
           src="https://my.matterport.com/show/?m=L6uPXrsdwkK&brand=0&play=1"

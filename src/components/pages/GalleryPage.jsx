@@ -1,59 +1,99 @@
 import React from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import { Title } from 'components/layout/styles';
-const home = ['https://my.matterport.com/show/?m=LtNgUsCT5WD'];
-const resturants = [
-  'https://my.matterport.com/show/?m=L6uPXrsdwkK',
-  'https://my.matterport.com/show/?m=bK8TvkzXkNe&play=1&brand=0',
-];
-const retail = [
-  'https://my.matterport.com/show/?m=J2hb12qVgeb&play=1&brand=1',
-  'https://matterport.com/discover/space/PbeJV91QJLt',
-];
-const hotel = [
-  'https://my.matterport.com/show/?m=Rd6F8HYmJ64',
-  'https://my.matterport.com/show/?m=vP3MtKxs35G',
-  'https://my.matterport.com/show/?m=hEJwkbFDkrR&play=1&ts=1&guides=0&brand=1&title=1&hl=3',
-  'https://my.matterport.com/show/?m=ixMRDDkHem1',
+
+import { Container, Title } from 'components/layout/styles';
+import Carousel from 'components/layout/Carousel';
+const home = [
+  {
+    link: 'https://my.matterport.com/show/?m=LtNgUsCT5WD',
+    name: '35 East Dilido Dr.',
+  },
+  {
+    link: 'https://my.matterport.com/show/?m=oW5z7HtFb16',
+    name: 'The Chowdhury House',
+  },
+  { link: 'https://my.matterport.com/show/?m=mUmrfGyNtoo', name: 'Elmtree' },
 ];
 
-const ShowcaseItem = ({ data }) => {
-  return (
-    <div className="relative flex-grow-0 shrink-0 basis-full pt-[56.25%] m-12 xl:basis-1/2">
-      <iframe
-        className="absolute top-0 left-0 w-full h-full"
-        src={data}
-        frameBorder="0"
-        title="showcase"
-        allowFullScreen
-        allow="xr-spatial-tracking"
-      ></iframe>
-    </div>
-  );
-};
+const restaurants = [
+  {
+    link: 'https://my.matterport.com/show/?m=L6uPXrsdwkK',
+    name: 'Estefan Kitchen 3269 Margaritaville Blvd',
+  },
+  {
+    link: 'https://my.matterport.com/show/?m=bK8TvkzXkNe',
+    name: 'CSquare Cafe',
+  },
+];
+const retail = [
+  {
+    link: 'https://my.matterport.com/show/?m=J2hb12qVgeb',
+    name: 'Welcome the new look of Pantaloons',
+  },
+  {
+    link: 'https://matterport.com/discover/space/PbeJV91QJLt',
+    name: 'Kohler Experience Center',
+  },
+  {
+    link: 'https://my.matterport.com/show/?m=aDgG7x2KmqZ',
+    name: 'Marks & Spencer - Welcome to Stevenage',
+  },
+];
+const hotel = [
+  {
+    link: 'https://my.matterport.com/show/?m=Rd6F8HYmJ64',
+    name: 'Villa 2ch',
+  },
+  {
+    link: 'https://my.matterport.com/show/?m=vP3MtKxs35G',
+    name: 'Riviera villa',
+  },
+  {
+    link: 'https://my.matterport.com/show/?m=hEJwkbFDkrR',
+    name: 'Rudding Park - Follifoot',
+  },
+  {
+    link: 'https://my.matterport.com/show/?m=ixMRDDkHem1',
+    name: 'Diane Oceanfront Suite',
+  },
+];
+
 const GalleryPage = () => {
-  const [emblaRef] = useEmblaCarousel({ align: 'start' });
   return (
-    <div>
-      <div className="pt-20">
-        <Title className="mb-4">Retail</Title>
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {retail.map((data, i) => (
-              <ShowcaseItem data={data} key={i} />
-            ))}
-          </div>
-        </div>
+    <div className="pt-16 bg-black text-neutral-50">
+      <div className="py-8 space-y-8 text-center bg-gradient-to-br from-neutral-900 to-neutral-700 text-neutral-50">
+        <Title>360 Virtual Tours</Title>
+        <p className="max-w-lg mx-auto leading-6 tracking-wide">
+          A gallery of 360 degree virtual tours and panoramic photography
+          featuring real estate, clinic, hotels, restaurants, and many more.
+        </p>
+        <p className="max-w-lg mx-auto leading-6 tracking-wide">
+          Get in touch to book your own 360° Virtual Tour.
+        </p>
       </div>
-      <div className="pt-20">
-        <Title className="mb-4">Hotel</Title>
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {hotel.map((data, i) => (
-              <ShowcaseItem data={data} key={i} />
-            ))}
-          </div>
-        </div>
+      <div>
+        <Container>
+          <Title className="my-4">Residential</Title>
+        </Container>
+        <Carousel items={home} />
+      </div>
+      <div>
+        <Container>
+          <Title className="mb-4">Hotel</Title>
+        </Container>
+        <Carousel items={hotel} />
+      </div>
+
+      <div className="">
+        <Container>
+          <Title className="mb-4">Restaurants</Title>
+        </Container>
+        <Carousel items={restaurants} />
+      </div>
+      <div className="">
+        <Container>
+          <Title className="mb-4">Retail</Title>
+        </Container>
+        <Carousel items={retail} />
       </div>
     </div>
   );

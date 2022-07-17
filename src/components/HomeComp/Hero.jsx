@@ -82,7 +82,7 @@ const Hero = () => {
               className="relative"
               style={{
                 marginInline: 'auto',
-                width: dimensions.width,
+                width: dimensions.width / 2,
                 height: dimensions.width / 2,
               }}
             >

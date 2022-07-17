@@ -1,4 +1,5 @@
 export const navData = [
+  { name: 'Home', url: '/' },
   {
     name: 'Gallery',
     url: '/gallery',
@@ -6,14 +7,5 @@ export const navData = [
   {
     name: 'About',
     url: '/about',
-  },
-
-  {
-    name: 'Portfolio',
-    url: '/portfolio',
-  },
-  {
-    name: 'Blog',
-    url: '/blog',
   },
 ];
