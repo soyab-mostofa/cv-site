@@ -4,6 +4,7 @@ import Header from 'components/layout/Header';
 import GalleryPage from 'components/pages/GalleryPage';
 import HomePages from 'components/pages/HomePages';
 import NotFoundPage from 'components/pages/NotFoundPage';
+import ScrollToTop from 'components/ScrollToTop';
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Route } from 'react-router-dom';
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Header showNav={showNav} setShowNav={setShowNav} />
         <AnimatePresence>
           {showNav && <Drawer setShowNav={setShowNav} />}
@@ -23,7 +25,9 @@ function App() {
         <main className="h-full">
           <Routes>
             <Route path="/" element={<HomePages />} />
+
             <Route path="/gallery" element={<GalleryPage />} />
+
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>

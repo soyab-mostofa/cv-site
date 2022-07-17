@@ -72,7 +72,7 @@ const GalleryPage = () => {
       </div>
       <div>
         <Container>
-          <Title className="my-4">Residential</Title>
+          <Title className="my-4 mt-12">Residential</Title>
         </Container>
         <Carousel items={home} />
       </div>
