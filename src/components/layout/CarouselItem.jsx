@@ -13,8 +13,8 @@ const ShowcaseItem = ({ data }) => {
           allow="xr-spatial-tracking"
         ></iframe>
       </div>
-      <div className="px-2 py-12 font-semibold text-center text-neutral-50">
-        <h1 className="mb-8">{data.name}</h1>
+      <div className="px-2 py-4 font-semibold text-center text-neutral-50">
+        <h1 className="mb-2">{data.name}</h1>
 
         <a
           href={data.link}

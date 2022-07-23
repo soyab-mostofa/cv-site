@@ -1,6 +1,7 @@
 import Drawer from 'components/layout/Drawer';
 import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
+import AboutUs from 'components/pages/AboutUs';
 import GalleryPage from 'components/pages/GalleryPage';
 import HomePages from 'components/pages/HomePages';
 import NotFoundPage from 'components/pages/NotFoundPage';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<HomePages />} />
 
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/about" element={<AboutUs />} />
 
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
