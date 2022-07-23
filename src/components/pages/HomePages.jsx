@@ -9,6 +9,7 @@ import AdditionalFeatures from 'components/HomeComp/AdditionalFeatures';
 import CategoryCarousel from 'components/HomeComp/CategoryCarousel';
 import WhyChoose from 'components/HomeComp/WhyChoose';
 import Explore3d from 'components/HomeComp/Explore3d';
+import ScanSteps from 'components/HomeComp/ScanSteps';
 const HomePages = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const HomePages = () => {
       <WhatIsIt />
       <CategoryCarousel />
       <WhyChoose />
+      <ScanSteps />
       <KeyFeatures />
       <AdditionalFeatures />
     </div>

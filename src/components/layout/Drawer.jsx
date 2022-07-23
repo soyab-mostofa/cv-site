@@ -1,8 +1,9 @@
 import { navData } from 'lib/data';
 import React from 'react';
-import { Routes } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import pdf from 'assets/retail-and-restaurant-cv.pdf';
 
 const drawerVariants = {
   initial: {
@@ -62,6 +63,18 @@ const Drawer = ({ setShowNav }) => {
       exit="exit"
       className="fixed right-0 z-50 w-full h-screen mt-20 sm:w-80 bg-neutral-900/90 backdrop-blur-md md:hidden"
     >
+      <motion.a
+        variants={linkVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        onClick={() => setShowNav(false)}
+        className="px-8 py-6 font-semibold text-neutral-50"
+        href={pdf}
+      >
+        Pricing
+      </motion.a>
+
       {navData.map((item, i) => (
         <NavItem
           setShowNav={setShowNav}

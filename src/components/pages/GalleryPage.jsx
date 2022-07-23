@@ -16,6 +16,10 @@ const home = [
 
 const restaurants = [
   {
+    link: 'https://my.matterport.com/show/?m=GMeXDnyPQAX',
+    name: "Restaurant L'Un Des Sens",
+  },
+  {
     link: 'https://my.matterport.com/show/?m=L6uPXrsdwkK',
     name: 'Estefan Kitchen 3269 Margaritaville Blvd',
   },
@@ -70,11 +74,17 @@ const GalleryPage = () => {
           Get in touch to book your own 360° Virtual Tour.
         </p>
       </div>
+      <div className="">
+        <Container>
+          <Title className="mt-12 mb-4">Restaurants</Title>
+        </Container>
+        <Carousel items={restaurants} />
+      </div>
       <div>
         <Container>
-          <Title className="my-4 mt-12">Residential</Title>
+          <Title className="my-4 ">Retail</Title>
         </Container>
-        <Carousel items={home} />
+        <Carousel items={retail} />
       </div>
       <div>
         <Container>
@@ -85,15 +95,9 @@ const GalleryPage = () => {
 
       <div className="">
         <Container>
-          <Title className="mb-4">Restaurants</Title>
+          <Title className="mb-4"> Residential</Title>
         </Container>
-        <Carousel items={restaurants} />
-      </div>
-      <div className="">
-        <Container>
-          <Title className="mb-4">Retail</Title>
-        </Container>
-        <Carousel items={retail} />
+        <Carousel items={home} />
       </div>
     </div>
   );

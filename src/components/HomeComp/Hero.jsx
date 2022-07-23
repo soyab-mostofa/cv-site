@@ -64,11 +64,13 @@ const Hero = () => {
                 width: dimensions.width,
                 height: dimensions.width / 2,
                 maxWidth: '600px',
+                maxHeight: '600px',
+                top: '50%',
               }}
             >
               <img
                 src={hero}
-                className="absolute object-contain w-full h-full"
+                className="absolute object-contain w-full h-full top-8"
                 alt="hero"
               />
             </div>

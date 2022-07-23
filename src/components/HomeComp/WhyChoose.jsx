@@ -7,7 +7,7 @@ const data = [
     desc: 'With everyone one of our shoots you get more than just your 3D walkthrough. We offer multiple marketing collateral to come as a package. Teaser videos, HD images, Floor Plans and much more are just a few of our extra offers.',
   },
   {
-    title: 'More than a Photo Shoot',
+    title: 'Digital Marketing',
     desc: "Now, more than ever, there is an emphasis on digital marketing, it's important to stand out. Our 3D Tours can be fully integrated with your marketing strategy along with any existing media you utilize.",
   },
   {

@@ -60,7 +60,9 @@ const AdditionalFeatures = () => {
     <Background>
       <Container>
         <Parallax>
-          <Title>Additional Features</Title>
+          <Title className="mb-12 -mt-8 text-center md:text-5xl">
+            Additional Features
+          </Title>
           <div className="grid gap-4 mt-20 md:grid-cols-2">
             {features.map((feature, i) => (
               <Item key={i} feature={feature} />

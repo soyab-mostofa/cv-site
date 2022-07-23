@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="flex flex-col items-center text-center md:items-end">
-            <a href="tel:+880 1609 2665 240">+880 1609 2665 240</a>
+            <a href="tel:+8801771766607">+880 177 176 6607</a>
 
             <a href="mailto:contact@clydevisuals.com.au">
               contact@clydevisuals.com.au

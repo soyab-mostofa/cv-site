@@ -43,7 +43,9 @@ const KeyFeatures = () => {
     <Background>
       <Container className="py-10">
         <Parallax>
-          <Title>Key Features</Title>
+          <Title className="mb-12 -mt-8 text-center md:text-5xl">
+            Key Features
+          </Title>
         </Parallax>
         <ImageContainer>
           {features.map((feature, i) => (

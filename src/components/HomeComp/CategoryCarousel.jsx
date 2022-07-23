@@ -1,57 +1,43 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
 import useEmblaCarousel from 'embla-carousel-react';
-import commercial from 'assets/images/commercial.jpg';
-import home from 'assets/images/home.jpg';
-import popup from 'assets/images/popup.jpg';
-import sales from 'assets/images/sales.jpg';
-import tour from 'assets/images/tour.jpg';
-import university from 'assets/images/university.jpg';
-import venue from 'assets/images/venue.jpg';
+import hotel from 'assets/images/Hotel.jpg';
+import industrial from 'assets/images/Industrial.jpg';
+import residential from 'assets/images/Residential.jpg';
+import retail from 'assets/images/Retail.jpg';
+import restaurant from 'assets/images/Restaurant.jpg';
 import { Background, Container, Title } from 'components/layout/styles';
 const Button = tw.button`text-neutral-50 px-4 py-2 bg-neutral-900 text-sm tracking-wide text-center transition-all hover:text-neutral-900 border-2 border-neutral-50 hover:bg-neutral-300 uppercase mt-3`;
 const cardData = [
   {
-    image: home,
-    title: 'retail',
+    image: restaurant,
+    title: 'Restaurant',
+    description:
+      'Imagine a future where your customers can explore your restaurant with an immersive  virtual site seeing experience. Customers are more likely to pay a visit when you have a 3D virtual tour.',
+  },
+  {
+    image: retail,
+    title: 'Retail',
     description:
       'Let your customers shop your store from anywhere in the world on any device, with a digital twin store linking to your commerce website or in the metaverse.',
   },
   {
-    image: sales,
-    title: 'Home Sales & Lettings',
-    description:
-      '3d tours that sell properties up to 31% faster and at a higher price. 4k drone footage that shows the scale and land of your properties.',
-  },
-  {
-    image: commercial,
-    title: 'Commercial Sales & Lettings',
-    description:
-      'Let your potential buyer or tenant explore your space, immersing them in local facilities and features & benefits.',
-  },
-  {
-    image: tour,
-    title: 'Leisure & Tourism',
+    image: hotel,
+    title: 'Hotel',
     description:
       'Whether you are promoting your hotel, holiday home, or caravan park, an interactive model gives a unique point of difference to your customers.',
   },
   {
-    image: venue,
-    title: 'Venues',
+    image: residential,
+    title: 'Residential',
     description:
-      'Create richer engagement with your fans across the globe by allowing them never seen before access to all areas of your stadium / club.',
+      '3d tours that sell properties up to 31% faster and at a higher price. 3D Digital Twin & Schematic floor plans that show the scale and land of your properties.',
   },
   {
-    image: popup,
-    title: 'Pop Ups',
+    image: industrial,
+    title: 'Industrial',
     description:
-      'Capture your unique space and let potential visitors explore from anywhere in the world. Immortalise temporary spaces forever in the Metaverse.',
-  },
-  {
-    image: university,
-    title: 'Schools, Colleges & Universities',
-    description:
-      'Show perspective pupils and parents all aspects of your education facilities, with interactive maps and brochures.',
+      'Let your potential buyer or tenant explore your space, immersing them in local facilities and features & benefits.',
   },
 ];
 const Card = ({ data }) => {
