@@ -74,7 +74,7 @@ const Header = ({ showNav, setShowNav }) => {
           </Button>
         </NavLinkContainer>
         <div className="relative z-40 md:hidden text-neutral-50">
-          <Hamburger onToggle={() => setShowNav(!showNav)} />
+          <Hamburger toggled={showNav} onToggle={() => setShowNav(!showNav)} />
         </div>
       </NavContainerInner>
     </NavContainer>

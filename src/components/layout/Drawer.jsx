@@ -7,31 +7,17 @@ import pdf from 'assets/retail-and-restaurant-cv.pdf';
 
 const drawerVariants = {
   initial: {
-    opacity: 0,
+    x: '1000px',
   },
   animate: {
-    opacity: 1,
+    x: 0,
     transition: {
-      staggerChildren: 0.5,
+      type: 'tween',
+      duration: 0.7,
     },
   },
   exit: {
-    opacity: 0,
-  },
-};
-
-const linkVariants = {
-  initial: {
-    opacity: 0,
-    x: -100,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-  },
-  exit: {
-    opacity: 0,
-    x: -100,
+    x: '40rem',
   },
 };
 
@@ -39,16 +25,12 @@ const NavItem = ({ name, url, setShowNav }) => {
   return (
     <>
       <Link to={url}>
-        <motion.p
-          variants={linkVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
+        <motion.a
           onClick={() => setShowNav(false)}
           className="px-8 py-6 font-semibold text-neutral-50"
         >
           {name}
-        </motion.p>
+        </motion.a>
       </Link>
     </>
   );
@@ -61,20 +43,8 @@ const Drawer = ({ setShowNav }) => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="fixed right-0 z-50 w-full h-screen mt-20 sm:w-80 bg-neutral-900/90 backdrop-blur-md md:hidden"
+      className="fixed top-0 right-0 z-30 flex flex-col w-full h-screen space-y-8 text-2xl pt-28 sm:w-80 bg-neutral-900/90 backdrop-blur-md md:hidden"
     >
-      <motion.a
-        variants={linkVariants}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        onClick={() => setShowNav(false)}
-        className="px-8 py-6 font-semibold text-neutral-50"
-        href={pdf}
-      >
-        Pricing
-      </motion.a>
-
       {navData.map((item, i) => (
         <NavItem
           setShowNav={setShowNav}
@@ -83,6 +53,13 @@ const Drawer = ({ setShowNav }) => {
           url={item.url}
         />
       ))}
+      <a
+        onClick={() => setShowNav(false)}
+        className="px-8 font-semibold text-neutral-50"
+        href={pdf}
+      >
+        Pricing
+      </a>
     </motion.div>
   );
 };
