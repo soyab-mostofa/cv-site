@@ -7,6 +7,8 @@ import residential from 'assets/images/Residential.jpg';
 import retail from 'assets/images/Retail.jpg';
 import restaurant from 'assets/images/Restaurant.jpg';
 import { Background, Container, Title } from 'components/layout/styles';
+import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 const Button = tw.button`text-neutral-50 px-4 py-2 bg-neutral-900 text-sm tracking-wide text-center transition-all hover:text-neutral-900 border-2 border-neutral-50 hover:bg-neutral-300 uppercase mt-3`;
 const cardData = [
   {
@@ -55,7 +57,9 @@ const Card = ({ data }) => {
       </div>
       <div className="flex flex-col items-stretch justify-between px-6 py-6 text-neutral-50">
         <p>{data.description}</p>
-        <Button className="mt-8 ">{`See out approach to ${data.title}`}</Button>
+        <Link to={{ pathname: '/gallery', hash: data.title.toLowerCase() }}>
+          <Button className="mt-8 ">{`See out approach to ${data.title}`}</Button>
+        </Link>
       </div>
     </div>
   );

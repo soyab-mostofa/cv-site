@@ -1,7 +1,13 @@
+import tw from 'tailwind-styled-components';
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-import { Container, Title } from 'components/layout/styles';
 import Carousel from 'components/layout/Carousel';
+import { useRef } from 'react';
+import { useEffect } from 'react';
+const Container = tw.div`container px-4 pt-16 max-w-6xl mx-auto`;
+const Title = tw.h1`text-3xl mb-8 font-semibold uppercase tracking-widest md:text-center`;
+
 const home = [
   {
     link: 'https://my.matterport.com/show/?m=LtNgUsCT5WD',
@@ -62,6 +68,27 @@ const hotel = [
 ];
 
 const GalleryPage = () => {
+  const { hash } = useLocation();
+
+  console.log(hash);
+
+  const restaurantRef = useRef(null);
+  const retailRef = useRef(null);
+  const hotelRef = useRef(null);
+  const residentialRef = useRef(null);
+
+  useEffect(() => {
+    if (hash === '#retail') {
+      retailRef.current.scrollIntoView();
+    } else if (hash === '#residential') {
+      residentialRef.current.scrollIntoView();
+    } else if (hash === '#hotel') {
+      hotelRef.current.scrollIntoView();
+    } else if (hash === '#restaurants') {
+      hotelRef.current.scrollIntoView();
+    }
+  }, [hash]);
+
   return (
     <div className="pt-16 bg-black text-neutral-50">
       <div className="py-8 space-y-8 text-center bg-gradient-to-br from-neutral-900 to-neutral-700 text-neutral-50">
@@ -74,28 +101,28 @@ const GalleryPage = () => {
           Get in touch to book your own 360° Virtual Tour.
         </p>
       </div>
-      <div className="">
+      <div ref={restaurantRef}>
         <Container>
           <Title className="mt-12 mb-4">Restaurants</Title>
         </Container>
         <Carousel items={restaurants} />
       </div>
-      <div>
+      <div ref={retailRef}>
         <Container>
-          <Title className="my-4 ">Retail</Title>
+          <Title className="my-4">Retail</Title>
         </Container>
         <Carousel items={retail} />
       </div>
-      <div>
+      <div ref={hotelRef}>
         <Container>
           <Title className="mb-4">Hotel</Title>
         </Container>
         <Carousel items={hotel} />
       </div>
 
-      <div className="">
+      <div ref={residentialRef}>
         <Container>
-          <Title className="mb-4"> Residential</Title>
+          <Title className="mb-4">Residential</Title>
         </Container>
         <Carousel items={home} />
       </div>

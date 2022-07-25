@@ -3,8 +3,6 @@ import useEmblaCarousel from 'embla-carousel-react';
 import ShowcaseItem from './CarouselItem';
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
 const Carousel = ({ items }) => {
-  console.log(items);
-
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'start' });
 
   const scrollPrev = useCallback(() => {
