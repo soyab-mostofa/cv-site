@@ -6,5 +6,5 @@
       "assets/*": ["./assets/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "public/serviceworker..js"]
 }
