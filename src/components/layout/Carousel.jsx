@@ -13,7 +13,7 @@ const Carousel = ({ items }) => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
   return (
-    <div className="relative my-12 overflow-hidden">
+    <div className="relative py-12 overflow-hidden">
       <div ref={emblaRef}>
         <div className="flex">
           {items.map((data) => (
